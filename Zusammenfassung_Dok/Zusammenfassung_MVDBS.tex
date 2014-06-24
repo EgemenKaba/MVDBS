@@ -1,0 +1,210 @@
+\documentclass[a4paper,11pt]{article}
+%\usepackage{isolatin1}
+%\usepackage{german}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{soul}
+
+\usepackage{lmodern} % Latin Modern
+
+\usepackage[ngerman]{babel, translator}
+\usepackage[utf8]{inputenc}
+\usepackage[hyphens]{url}
+
+%\usepackage[utf8x]{inputenc}
+\usepackage[left=2.5cm,top=2cm,right=2cm,bottom=4cm]{geometry}
+
+%Code listings
+\usepackage{listingsutf8}
+
+
+%\usepackage[]{hyperref}
+%\hypersetup{
+%	linkcolor=blue, 
+%	pagecolor= blue,
+%	urlcolor= blue,
+%	colorlinks=true,
+%	pdfborder=0 0 0
+%}
+\usepackage[
+nonumberlist, %keine Seitenzahlen anzeigen
+acronym,      %ein Abk�rzungsverzeichnis erstellen
+toc,          %Eintr�ge im Inhaltsverzeichnis
+section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}
+
+
+%\usepackage{hyperref}
+
+%Ein eigenes Symbolverzeichnis erstellen
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis}
+
+%Den Punkt am Ende jeder Beschreibung deaktivieren
+\renewcommand*{\glspostdescription}{}
+
+%Glossar-Befehle anschalten
+\makeglossaries
+
+%Diese Befehle sortieren die Eintr�ge in den
+%einzelnen Listen:
+%makeindex -s datei.ist -t datei.alg -o datei.acr datei.acn
+%makeindex -s datei.ist -t datei.glg -o datei.gls datei.glo
+%makeindex -s datei.ist -t datei.slg -o datei.syi datei.syg
+
+
+
+%Befehle f�r Abk�rzungen
+\newacronym{BDD}{BDD}{Behaviour Driven Development}
+
+%Befehle f�r Glossar
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+%Einstellungen f??r code listings
+\lstset{inputencoding=latin1, language=Java,tabsize=2, basicstyle=\small,breaklines=true,showstringspaces=false}
+\pagestyle{fancy}
+\setlength{\headwidth}{470pt}
+\renewcommand{\headrule}{\hskip -\leftskip{\bf \quad \quad}\vbox to 5pt{\hbox to 455pt{\hrulefill}}}
+\renewcommand{\footrule}{\hskip-\leftskip{\bf \quad \quad}{\hbox to 450 pt{\hrulefill}\newline}}
+\fancyhf{}
+\fancyheadoffset[L]{1cm}
+\fancyfootoffset[L]{1cm}
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\includegraphics[height=0.5in]{img/fhnw_ht_10mm.jpg}}
+%Kopfzeile mittig
+\fancyhead[C]{}
+%Kopfzeile rechts bzw. au??????????�?en
+\fancyhead[R]{\hspace{10pt} \\MVDBS Lab\\ \rightmark }
+  \fancyheadoffset[L]{1cm}
+  \fancyfootoffset[L]{1cm}
+%Linie oben
+\renewcommand{\headrulewidth}{0.7pt}
+%Fu??????????�?zeile mittig
+\cfoot{Seite:\ \thepage\ von \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{black}}
+\DeclareCaptionFormat{listing}{\colorbox{white}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white,font=bf}
+
+
+\lstdefinestyle{sqlNoTitle}{
+   language=SQL,
+   basicstyle=\footnotesize\ttfamily, % Standardschrift
+   backgroundcolor=\color[RGB]{230,230,230}, % Hintergrundfarbe
+   numbers=left,               % Ort der Zeilennummern
+   numberstyle=\tiny,          % Stil der Zeilennummern
+   stepnumber=1,               % Abstand zwischen den Zeilennummern
+   numbersep=5pt,              % Abstand der Nummern zum Text
+   tabsize=2,                  % Groesse von Tabs
+   extendedchars=true,         % Erlaubt non-ascii Charakter, aber nicht mit UTF8
+   literate={ä}{{\"a}}1 {ü}{{\"u}}1 {ö}{{\"o}}1,
+   breaklines=true,            % Zeilen werden Umgebrochen
+   frame=trbl,                 % Rahmen
+   stringstyle=\color[RGB]{42,0,255} \ttfamily, % Farbe der String
+   keywordstyle=\color[RGB]{127,0,85} \ttfamily, % Farbe der Keywords
+   commentstyle=\color[RGB]{63,127,95} \ttfamily, % Farbe des Kommentars
+   showspaces=false,           % Leerzeichen anzeigen ?
+   showtabs=false,             % Tabs anzeigen ?
+   xleftmargin=17pt,
+   framexleftmargin=17pt,
+   framexrightmargin=5pt,
+   framexbottommargin=5pt,
+   framextopmargin=5pt,
+   showstringspaces=false,     % Leerzeichen in Strings anzeigen ?
+}
+
+
+\lstdefinestyle{sql}{
+   style=sqlNoTitle,
+   title=SQL-Skript
+}
+
+\lstdefinestyle{queryResult}{
+  basicstyle=\footnotesize\ttfamily, % Standardschrift
+  backgroundcolor=\color[RGB]{240,255,240}, % Hintergrundfarbe
+  frame=trbl,                 % Rahmen
+  literate={ä}{{\"a}}1 {ü}{{\"u}}1 {ö}{{\"o}}1,
+}
+
+\lstdefinestyle{queryResultSmall}{
+  style=queryResult,
+  basicstyle=\scriptsize\ttfamily, % Standardschrift
+}
+
+%Linie unten
+\renewcommand{\footrulewidth}{0.5pt}
+
+\vspace*{15mm}
+\textwidth 450pt
+
+
+
+\begin{document}
+
+\setcounter{tocdepth}{5}
+
+
+
+%\thispagestyle{empty}
+
+\begin{center}
+
+\vspace{48pt}
+
+
+\begin{Huge}
+\noindent {Mobile und Verteilte Datenbank Systeme - Zusammenfassung}
+\end{Huge}\\ 
+\vspace{10pt}
+\begin{center}
+\begin{Large}
+Egemen Kaba
+\end{Large}
+\end{center}
+
+\vspace{10pt}
+
+
+
+\end{center}
+
+\newpage
+
+
+\newpage
+
+\tableofcontents
+
+%Glossar ausgeben
+%Glossar ausgeben
+
+
+\vspace{12pt}
+
+
+\newpage
+\section{Kapitel 1 - Trigger}
+\section{Kapitel 2 - Distributed Design I}
+\section{Kapitel 3 - Distributed Design II}
+\section{Kapitel 4 - Distributed Query Processing}
+\section{Kapitel 5 - Distributed Transactions I}
+\section{Kapitel 6 - Distributed Transactions II}
+\section{Kapitel 7 - Replication I}
+\section{Kapitel 8 - Replication II}
+\section{Kapitel 9 - NoSQL}
+\section{Kapitel 10 - Cassandra}
+\section{Kapitel 11 - MapReduce}
+\section{Kapitel 12 - mongoDB}
+\section{Kapitel 13 - Neo4j}
+\section{Kapitel 14 - Semantic Web}
+\end{document}
