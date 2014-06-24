@@ -193,7 +193,172 @@ Egemen Kaba
 
 
 \newpage
+\section{Kapitel 0 - Introduction}
+\begin{tabular}{| p{5cm} | p{10cm} |}
+\hline
+Verteilte Datenbank (DDB) & Eine verteilte Datenbank ist eine Sammlung mehrerer, untereinander logisch zusammengehöriger Datenbanken, die über ein Computernetzwerk verteilt sind.\\ \hline
+Verteiltes Datenbankverwaltungssystem (D-DBMS) & Ein verteiltes Datenbankverwaltungssystem ist die Software, die die verteilte Datenbank verwaltet und gegenüber den Nutzern einen transparenten Zugang erbringt.\\ \hline
+Verteiltes Datenbank System (DDBS) & DDBS = DBS + D-DBMS\\ \hline
+Nebenläufigkeit & 
+\begin{itemize}
+\item Synchronisation konkurrierender Transaktionen
+\item Konsistenz und Isolation
+\item Deadlock Erkennung
+\end{itemize}\\ \hline
+Zuverlässigkeit &
+\begin{itemize}
+\item Robustheit gegenüber Fehler
+\item Atomarität und Dauerhaftigkeit
+\end{itemize}\\ \hline
+Architekturen &
+\begin{itemize}
+\item Shared Memory Architecture
+\item Shared Disk Architecture
+\item Shared Nothing Architecture
+\end{itemize}\\ \hline
+Mobile Datenbank Systeme & 
+Verteilte Datenbank System mit zusätzlichen Eigenschaften und Einschränkungen
+\begin{itemize}
+\item beschränkte Ressource
+\item häufig nicht verbunden
+\item verlangt andere Transaktions Modelle
+\item verlangt andere Replikationsstrategien
+\item Ortsabhängigkeit
+\end{itemize}\\ \hline
+\end{tabular}\\
+\\
+\textbf{Date's 12 Regeln}
+\begin{itemize}
+\item Lokale Autonomie
+\item Unabhängigkeit von zentralen Systemfunktionen
+\item Hohe Verfügbarkeit
+\item Ortstransparenz
+\item Fragmentierungstransparenz
+\item Replikationstransparenz
+\item Verteilte Anfragebearbeitung
+\item Verteilte Transaktionsverarbeitung
+\item Hardware Unabhängigkeit
+\item Betriebssystem Unabhängigkeit
+\item Netzwerkunabhängigkeit
+\item Datenbanksystem Unabhängigkeit
+\end{itemize}
 \section{Kapitel 1 - Trigger}
+\subsection{Zweck}
+\begin{itemize}
+\item Realisieren aktive Datenbanksysteme
+\item Berechnung abgeleiteter Attribute
+\item Überprüfen komplexer Integritätsbedingungen
+\item Implementierung von Geschäftsregeln
+\item Protokollierung, Statistiken
+\item Überprüfen von Integritätsbedingungen in verteilten Datenbanken
+\item Synchronisation von Replikaten
+\end{itemize}
+\subsection{Konzepte}
+\begin{tabular}{| p{5cm} | p{10cm} |}
+\hline
+ECA Prinzip &
+Event: Ereignis tritt ein\newline
+Condition : Bedingung ist erfüllt\newline
+Action: Aktion wird ausgeführt\\ \hline
+Ereignis &
+DML: UPDATE, DELETE, INSERT\newline
+DDL: CREATE, ALTER, DROP, ...\newline
+Datenbank: SERVERERROR, LOGON, LOGOFF, STARTUP, SHUTDOWN\newline
+(DML-Trigger können auf Tabellen oder Views definiert werden)\\ \hline
+Timing & BEFORE, AFTER, INSTEAD OF Trigger\newline
+Der INSTEAD OF Trigger ersetzt den triggernden Befehl und wird nur bei Views eingesetzt.\\ \hline
+Granulat & STATEMENT, ROW Trigger\\ \hline
+\end{tabular}
+\subsection{Struktur eines Triggers}
+\begin{lstlisting}[style=sql, title=Syntax]
+CREATE [OR REPLACE] TRIGGER tname
+{BEFORE|AFTER} events
+[WHEN(condition)]
+pl/sql_block
+\end{lstlisting}
+\begin{lstlisting}[style=sql, title=events]
+{DELETE|INSERT|UPDATE
+	[OF column [ , column ]...] }
+[OR {DELETE|INSERT|UPDATE
+	[OF column [ , column ]...]}]...
+ON table [FOR EACH ROW]
+\end{lstlisting}
+\begin{lstlisting}[style=sql, title=Prinzip]
+DECLARE
+	Deklarationsteil
+BEGIN
+	Programmteil
+EXCEPTION
+	Ausnahmebehandlung
+END;
+/
+\end{lstlisting}
+\begin{lstlisting}[style=sql, title=Bildschirmausgabe]
+dbms_output.put_line (item IN VARCHAR2);
+dbms_output.put_line (item IN NUMBER);
+dbms_output.put_line (item IN DATE);
+dbms_output.put(item IN VARCHAR2);
+dbms_output.put(item IN NUMBER);
+dbms_output.put(item IN DATE);
+dbms_output.new_line;
+-- Ausführung
+EXECUTE dbms_output.put_line('Hello world');
+-- als Block
+BEGIN
+	dbms_output.put_line('Hello world');
+END;
+\end{lstlisting}
+\textbf{Datentypen}\\
+\begin{itemize}
+\item SQL: VARCHAR2, DATE, NUMBER, ...
+\item PL/SQL: BOOLEAN, PLS\_INTEGER, ...
+\item Strukturierte Datentypen: TABLE, VARRAY, RECORD
+\item Datentypen für Spalten und Zeilen aus Tabellen: \% ROWTYPE, \%TYPE
+\end{itemize}
+\begin{lstlisting}[style=sql, title=Zuweisung]
+-- Syntax
+variable := expression;
+-- Beispiel im Deklarationsteil
+name VARCHAR2(30) := 'Kaba';
+\end{lstlisting}
+\begin{lstlisting}[style=sql, title=if then else elsif]
+IF condition THEN ... END IF;
+IF condition THEN ... ELSIF condition THEN ... ELSE ... END IF;
+IF condition THEN ... ELSE ... END IF;
+\end{lstlisting}
+\begin{lstlisting}[style=sql, title=if then else elsif]
+IF condition THEN ... END IF;
+IF condition THEN ... ELSIF condition THEN ... ELSE ... END IF;
+IF condition THEN ... ELSE ... END IF;
+\end{lstlisting}
+\begin{lstlisting}[style=sql, title=schleifen]
+WHILE condition LOOP ... END LOOP;
+FOR counter IN lower_bound..higher_bound LOOP ... END LOOP;
+\end{lstlisting}
+\subsection{Beispiel}
+\begin{lstlisting}[style=sql, title=Trigger]
+CREATE OR REPLACE TRIGGER regdatum_test
+	BEFORE INSERT ON registrierungen
+	FOR EACH ROW
+	
+	DECLARE
+		msg VARCHAR2(30) := 'Datum falsch';
+	BEGIN
+		IF :new.datum > SYSDATE THEN
+			RAISE_APPLICATION_ERROR(-20005, msg);
+		END IF;
+END;
+\end{lstlisting}
+\subsection{Databaselinks}
+Datenbanklinks werden benötigt, um Orts- und Namenstransparenz zu erreichen.
+\begin{lstlisting}[style=sql, title=Databaselinks]
+-- View
+CREATE OR REPLACE VIEW filme AS
+SELECT *
+FROM filme@ananke.hades.fhnw.ch;
+-- Synonyme
+CREATE SYNONYM film FOR filme@ananke.hades.fhnw.ch;
+\end{lstlisting}
 \section{Kapitel 2 - Distributed Design I}
 \section{Kapitel 3 - Distributed Design II}
 \section{Kapitel 4 - Distributed Query Processing}

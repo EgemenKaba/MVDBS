@@ -1,0 +1,21 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Kapitel 0 - Introduction}{3}
+\contentsline {section}{\numberline {2}Kapitel 1 - Trigger}{4}
+\contentsline {subsection}{\numberline {2.1}Zweck}{4}
+\contentsline {subsection}{\numberline {2.2}Konzepte}{4}
+\contentsline {subsection}{\numberline {2.3}Struktur eines Triggers}{4}
+\contentsline {subsection}{\numberline {2.4}Beispiel}{6}
+\contentsline {subsection}{\numberline {2.5}Databaselinks}{6}
+\contentsline {section}{\numberline {3}Kapitel 2 - Distributed Design I}{7}
+\contentsline {section}{\numberline {4}Kapitel 3 - Distributed Design II}{7}
+\contentsline {section}{\numberline {5}Kapitel 4 - Distributed Query Processing}{7}
+\contentsline {section}{\numberline {6}Kapitel 5 - Distributed Transactions I}{7}
+\contentsline {section}{\numberline {7}Kapitel 6 - Distributed Transactions II}{7}
+\contentsline {section}{\numberline {8}Kapitel 7 - Replication I}{7}
+\contentsline {section}{\numberline {9}Kapitel 8 - Replication II}{7}
+\contentsline {section}{\numberline {10}Kapitel 9 - NoSQL}{7}
+\contentsline {section}{\numberline {11}Kapitel 10 - Cassandra}{7}
+\contentsline {section}{\numberline {12}Kapitel 11 - MapReduce}{7}
+\contentsline {section}{\numberline {13}Kapitel 12 - mongoDB}{7}
+\contentsline {section}{\numberline {14}Kapitel 13 - Neo4j}{7}
+\contentsline {section}{\numberline {15}Kapitel 14 - Semantic Web}{7}
