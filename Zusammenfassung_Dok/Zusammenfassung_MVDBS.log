@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.4)  24 JUN 2014 15:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.4)  24 JUN 2014 17:26
 entering extended mode
 **Zusammenfassung_MVDBS.tex
 
@@ -123,6 +123,14 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen110
 \SOUL@ulht=\dimen111
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen112
+\extrarowheight=\dimen113
+\NC@list=\toks23
+\extratabsurround=\skip53
+\backup@length=\skip54
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -173,7 +181,7 @@ Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count97
-\U@D=\dimen112
+\U@D=\dimen114
 )
 \l@naustrian = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 92.
@@ -186,8 +194,8 @@ Package: translator 2010/06/12 ver 1.10
 -language-mappings.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks23
-\inpenc@posthook=\toks24
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -422,15 +430,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count98
 \Gm@cntv=\count99
 \c@Gm@tempcnt=\count100
-\Gm@bindingoffset=\dimen113
-\Gm@wd@mp=\dimen114
-\Gm@odd@mp=\dimen115
-\Gm@even@mp=\dimen116
-\Gm@layoutwidth=\dimen117
-\Gm@layoutheight=\dimen118
-\Gm@layouthoffset=\dimen119
-\Gm@layoutvoffset=\dimen120
-\Gm@dimlist=\toks25
+\Gm@bindingoffset=\dimen115
+\Gm@wd@mp=\dimen116
+\Gm@odd@mp=\dimen117
+\Gm@even@mp=\dimen118
+\Gm@layoutwidth=\dimen119
+\Gm@layoutheight=\dimen120
+\Gm@layouthoffset=\dimen121
+\Gm@layoutvoffset=\dimen122
+\Gm@dimlist=\toks26
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\listingsutf8.sty"
@@ -466,8 +474,8 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
 \XKV@depth=\count101
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
@@ -483,8 +491,8 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 )
 \etb@tempcnta=\count103
 )
-\@glsmfirst=\toks28
-\@glsmrest=\toks29
+\@glsmfirst=\toks29
+\@glsmrest=\toks30
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -497,7 +505,7 @@ Package: datatool-base 2013/09/06 v2.18 (NLCT)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip53
+\@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -505,12 +513,12 @@ Package: amstext 2000/06/29 v2.01
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks30
-\ex@=\dimen121
+\@emptytoks=\toks31
+\ex@=\dimen123
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen122
+\pmbraise@=\dimen124
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -527,7 +535,7 @@ LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box30
 \strutbox@=\box31
-\big@size=\dimen123
+\big@size=\dimen125
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count109
@@ -535,21 +543,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip11
 \c@parentequation=\count111
 \dspbrk@lvl=\count112
-\tag@help=\toks31
+\tag@help=\toks32
 \row@=\count113
 \column@=\count114
 \maxfields@=\count115
-\andhelp@=\toks32
-\eqnshift@=\dimen124
-\alignsep@=\dimen125
-\tagshift@=\dimen126
-\tagwidth@=\dimen127
-\totwidth@=\dimen128
-\lineht@=\dimen129
-\@envbody=\toks33
-\multlinegap=\skip54
-\multlinetaggap=\skip55
-\mathdisplay@stack=\toks34
+\andhelp@=\toks33
+\eqnshift@=\dimen126
+\alignsep@=\dimen127
+\tagshift@=\dimen128
+\tagwidth@=\dimen129
+\totwidth@=\dimen130
+\lineht@=\dimen131
+\@envbody=\toks34
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks35
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -608,9 +616,9 @@ Package: fp-upn 1996/10/21
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks35
+\@dtl@toks=\toks36
 \@dtl@tmpcount=\count128
-\dtl@tmplength=\skip56
+\dtl@tmplength=\skip58
 \dtl@sortresult=\count129
 \@dtl@numgrpsepcount=\count130
 \@dtl@datatype=\count131
@@ -623,13 +631,13 @@ ible-307.sty"
 Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
 )
 \gls@level=\count135
-\@gls@tmpb=\toks36
-\gls@tmplen=\skip57
+\@gls@tmpb=\toks37
+\gls@tmplen=\skip59
 \glswrite=\write3
-\glskeylisttok=\toks37
-\glslabeltok=\toks38
-\glsshorttok=\toks39
-\glslongtok=\toks40
+\glskeylisttok=\toks38
+\glslabeltok=\toks39
+\glsshorttok=\toks40
+\glslongtok=\toks41
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypern
 av.sty"
@@ -638,19 +646,19 @@ Package: glossary-hypernav 2013/11/14 v4.0 (NLCT)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.s
 ty"
 Package: glossary-list 2013/11/14 v4.0 (NLCT)
-\glslistdottedwidth=\skip58
+\glslistdottedwidth=\skip60
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.s
 ty"
 Package: glossary-long 2013/11/14 v4.0 (NLCT)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip59
-\LTright=\skip60
-\LTpre=\skip61
-\LTpost=\skip62
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
 \LTchunksize=\count136
-\LTcapwidth=\dimen130
+\LTcapwidth=\dimen132
 \LT@head=\box32
 \LT@firsthead=\box33
 \LT@foot=\box34
@@ -659,10 +667,10 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LT@rows=\count138
 \c@LT@tables=\count139
 \c@LT@chunks=\count140
-\LT@p@ftn=\toks41
+\LT@p@ftn=\toks42
 )
-\glsdescwidth=\skip63
-\glspagelistwidth=\skip64
+\glsdescwidth=\skip65
+\glspagelistwidth=\skip66
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.
 sty"
@@ -670,36 +678,36 @@ Package: glossary-super 2013/11/14 v4.0 (NLCT)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count141
-\ST@wd=\dimen131
-\ST@rightskip=\skip65
-\ST@leftskip=\skip66
-\ST@parfillskip=\skip67
-\ST@pageleft=\dimen132
-\ST@headht=\dimen133
-\ST@tailht=\dimen134
-\ST@pagesofar=\dimen135
-\ST@pboxht=\dimen136
-\ST@lineht=\dimen137
-\ST@stretchht=\dimen138
-\ST@prevht=\dimen139
-\ST@toadd=\dimen140
-\ST@dimen=\dimen141
+\ST@wd=\dimen133
+\ST@rightskip=\skip67
+\ST@leftskip=\skip68
+\ST@parfillskip=\skip69
+\ST@pageleft=\dimen134
+\ST@headht=\dimen135
+\ST@tailht=\dimen136
+\ST@pagesofar=\dimen137
+\ST@pboxht=\dimen138
+\ST@lineht=\dimen139
+\ST@stretchht=\dimen140
+\ST@prevht=\dimen141
+\ST@toadd=\dimen142
+\ST@dimen=\dimen143
 \ST@pbox=\box36
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.s
 ty"
 Package: glossary-tree 2013/11/14 v4.0 (NLCT)
-\glstreeindent=\skip68
+\glstreeindent=\skip70
 ))
 \glo@main@file=\write4
 Package glossaries Info: Writing glossary file Zusammenfassung_MVDBS.glo on inp
-ut line 49.
+ut line 50.
 \glo@acronym@file=\write5
 Package glossaries Info: Writing glossary file Zusammenfassung_MVDBS.acn on inp
-ut line 49.
+ut line 50.
 \glo@symbolslist@file=\write6
 Package glossaries Info: Writing glossary file Zusammenfassung_MVDBS.syg on inp
-ut line 49.
+ut line 50.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -735,13 +743,13 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen142
-\captionmargin@=\dimen143
-\captionwidth=\dimen144
-\caption@tempdima=\dimen145
-\caption@indent=\dimen146
-\caption@parindent=\dimen147
-\caption@hangindent=\dimen148
+\captionmargin=\dimen144
+\captionmargin@=\dimen145
+\captionwidth=\dimen146
+\caption@tempdima=\dimen147
+\caption@indent=\dimen148
+\caption@parindent=\dimen149
+\caption@hangindent=\dimen150
 )
 \c@ContinuedFloat=\count142
 Package caption Info: float package is loaded.
@@ -755,19 +763,19 @@ Package caption Info: supertabular package is loaded.
 )
 (C:\Users\Egemen\Documents\GitHub\MVDBS\Zusammenfassung_Dok\Zusammenfassung_MVD
 BS.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 152
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 153
 .
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -777,16 +785,16 @@ File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count144
-\scratchdimen=\dimen149
+\scratchdimen=\dimen151
 \scratchbox=\box37
 \nofMPsegments=\count145
 \nofMParguments=\count146
-\everyMPshowfont=\toks42
+\everyMPshowfont=\toks43
 \MPscratchCnt=\count147
-\MPscratchDim=\dimen150
+\MPscratchDim=\dimen152
 \MPnumerator=\count148
 \makeMPintoPDFobject=\count149
-\everyMPtoPDFconversion=\toks43
+\everyMPtoPDFconversion=\toks44
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
@@ -794,7 +802,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 152.
+(lastpage)             ! on input line 153.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\dict\glossaries-dictio
 nary-English.dict"
@@ -844,7 +852,7 @@ Package caption Info: End \AtBeginDocument code.
 File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 
 <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 181.
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 182.
 (pdftex.def)             Requested size: 233.23866pt x 36.135pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -911,7 +919,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 
 <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 195.
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 196.
 (pdftex.def)             Requested size: 233.23866pt x 36.135pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -937,36 +945,36 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
-[]\OT1/lmss/m/n/10.95 Verteiltes Da-ten-bank-ver-wal-
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
+[]|\OT1/lmss/m/n/10.95 Verteiltes Da-ten-bank-ver-wal-
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 201--201
-[]\OT1/lmss/m/n/10.95 Verteiltes Da-ten-bank Sys-tem
+Underfull \hbox (badness 1968) in paragraph at lines 202--202
+[]|\OT1/lmss/m/n/10.95 Verteiltes Da-ten-bank Sys-tem
  []
 
-LaTeX Font Info:    Try loading font information for OMS+lmss on input line 204
+LaTeX Font Info:    Try loading font information for OMS+lmss on input line 205
 .
-LaTeX Font Info:    No file OMSlmss.fd. on input line 204.
+LaTeX Font Info:    No file OMSlmss.fd. on input line 205.
 
 LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 204.
+(Font)              for symbol `textbullet' on input line 205.
 
 
-Overfull \hbox (0.79134pt too wide) in paragraph at lines 197--231
+Overfull \hbox (1.99132pt too wide) in paragraph at lines 198--232
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--231
+Underfull \hbox (badness 10000) in paragraph at lines 198--232
 
  []
 
 File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 238.
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 239.
 (pdftex.def)             Requested size: 233.23866pt x 36.135pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -992,18 +1000,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [3]
-Overfull \hbox (0.79134pt too wide) in paragraph at lines 257--272
+Overfull \hbox (1.99132pt too wide) in paragraph at lines 258--273
 [] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 273--273
+Overfull \hbox (6.0pt too wide) in paragraph at lines 274--274
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 273
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 274
 .
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1014,7 +1022,7 @@ File: latin1.def 2008/03/30 v1.1d Input encoding file
 File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 
 <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 279.
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 280.
 (pdftex.def)             Requested size: 233.23866pt x 36.135pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1040,33 +1048,33 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [4]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 279--279
+Overfull \hbox (6.0pt too wide) in paragraph at lines 280--280
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 286--286
+Overfull \hbox (6.0pt too wide) in paragraph at lines 287--287
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 296--296
+Overfull \hbox (6.0pt too wide) in paragraph at lines 297--297
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 318--318
+Overfull \hbox (6.0pt too wide) in paragraph at lines 319--319
 [][][][][][][] 
  []
 
@@ -1076,7 +1084,7 @@ File: latin1.def 2008/03/30 v1.1d Input encoding file
 File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 
 <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 323.
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 324.
 (pdftex.def)             Requested size: 233.23866pt x 36.135pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1097,46 +1105,171 @@ Overfull \hbox (28.45274pt too wide) has occurred while \output is active
  []
 
 [5]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 324--324
+Overfull \hbox (6.0pt too wide) in paragraph at lines 325--325
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 329--329
+Overfull \hbox (6.0pt too wide) in paragraph at lines 330--330
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 334--334
+Overfull \hbox (6.0pt too wide) in paragraph at lines 335--335
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 339--339
+Overfull \hbox (6.0pt too wide) in paragraph at lines 340--340
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 354--354
+Overfull \hbox (6.0pt too wide) in paragraph at lines 355--355
 [][][][][][][] 
  []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 )
+File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 
+<use img/fhnw_ht_10mm.jpg>
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 365.
+(pdftex.def)             Requested size: 233.23866pt x 36.135pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (29.09pt too wide) has occurred while \output is active
+[]   [] 
+ []
+
+
+Overfull \hbox (24.09pt too wide) has occurred while \output is active
+[]   [] 
+ []
+
+
+Overfull \hbox (28.45274pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[6] <src/horizontale_fragmentierung.png, id=28, 596.2275pt x 381.67593pt>
+File: src/horizontale_fragmentierung.png Graphic file (type png)
+
+<use src/horizontale_fragmentierung.png>
+Package pdftex.def Info: src/horizontale_fragmentierung.png used on input line 
+376.
+(pdftex.def)             Requested size: 447.16953pt x 286.25624pt.
+
+<src/vertikale_fragmentierung.png, id=30, 493.845pt x 423.08063pt>
+File: src/vertikale_fragmentierung.png Graphic file (type png)
+
+<use src/vertikale_fragmentierung.png>
+Package pdftex.def Info: src/vertikale_fragmentierung.png used on input line 38
+1.
+(pdftex.def)             Requested size: 370.38283pt x 317.3097pt.
+
+<src/simple_predicates.png, id=31, 270.25969pt x 77.53969pt>
+File: src/simple_predicates.png Graphic file (type png)
+
+<use src/simple_predicates.png>
+Package pdftex.def Info: src/simple_predicates.png used on input line 389.
+(pdftex.def)             Requested size: 135.1295pt x 38.76973pt.
+
+<src/minterm_predicates.png, id=32, 319.94531pt x 131.74219pt>
+File: src/minterm_predicates.png Graphic file (type png)
+
+<use src/minterm_predicates.png>
+Package pdftex.def Info: src/minterm_predicates.png used on input line 390.
+(pdftex.def)             Requested size: 159.97226pt x 65.87093pt.
+
+Overfull \hbox (42.84406pt too wide) in paragraph at lines 386--392
+[] 
+ []
+
+File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
+<use img/fhnw_ht_10mm.jpg>
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 392.
+(pdftex.def)             Requested size: 233.23866pt x 36.135pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (29.09pt too wide) has occurred while \output is active
+[]   [] 
+ []
+
+
+Overfull \hbox (24.09pt too wide) has occurred while \output is active
+[]   [] 
+ []
+
+
+Overfull \hbox (28.45274pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[7 <C:/Users/Egemen/Documents/GitHub/MVDBS/Zusammenfassung_Dok/src/horizontale_
+fragmentierung.png>]
+Overfull \hbox (1.99132pt too wide) in paragraph at lines 393--403
+[] 
+ []
+
+File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
+<use img/fhnw_ht_10mm.jpg>
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 403.
+(pdftex.def)             Requested size: 233.23866pt x 36.135pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (29.09pt too wide) has occurred while \output is active
+[]   [] 
+ []
+
+
+Overfull \hbox (24.09pt too wide) has occurred while \output is active
+[]   [] 
+ []
+
+
+Overfull \hbox (28.45274pt too wide) has occurred while \output is active
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[8 <C:/Users/Egemen/Documents/GitHub/MVDBS/Zusammenfassung_Dok/src/vertikale_fr
+agmentierung.png> <C:/Users/Egemen/Documents/GitHub/MVDBS/Zusammenfassung_Dok/s
+rc/simple_predicates.png> <C:/Users/Egemen/Documents/GitHub/MVDBS/Zusammenfassu
+ng_Dok/src/minterm_predicates.png>] 
 AED: lastpage setting LastPage
 File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
 <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 375.
+Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 415.
 (pdftex.def)             Requested size: 233.23866pt x 36.135pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1161,35 +1294,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[6]
-File: img/fhnw_ht_10mm.jpg Graphic file (type jpg)
- <use img/fhnw_ht_10mm.jpg>
-Package pdftex.def Info: img/fhnw_ht_10mm.jpg used on input line 375.
-(pdftex.def)             Requested size: 233.23866pt x 36.135pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (29.09pt too wide) has occurred while \output is active
-[]   [] 
- []
-
-
-Overfull \hbox (24.09pt too wide) has occurred while \output is active
-[]   [] 
- []
-
-
-Overfull \hbox (28.45274pt too wide) has occurred while \output is active
-[] 
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[7]
+[9]
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
@@ -1202,10 +1307,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10930 strings out of 493921
- 158117 string characters out of 3144873
- 390756 words of memory out of 3000000
- 13948 multiletter control sequences out of 15000+200000
+ 10998 strings out of 493921
+ 159348 string characters out of 3144873
+ 390455 words of memory out of 3000000
+ 14008 multiletter control sequences out of 15000+200000
  40354 words of font info for 37 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,16n,120p,1707b,1838s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1217,9 +1322,9 @@ s/type1/public/lm/lmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss
 8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Zusammenfassung_MVDBS.pdf (7 pages, 317045 bytes).
+Output written on Zusammenfassung_MVDBS.pdf (9 pages, 500677 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

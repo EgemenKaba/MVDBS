@@ -7,6 +7,7 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage{soul}
+\usepackage{array}
 
 \usepackage{lmodern} % Latin Modern
 
@@ -350,7 +351,7 @@ CREATE OR REPLACE TRIGGER regdatum_test
 END;
 \end{lstlisting}
 \subsection{Databaselinks}
-Datenbanklinks werden benötigt, um Orts- und Namenstransparenz zu erreichen.
+Datenbanklinks werden benötigt, um Orts- und Namenstransparenz für Tabellen zu erreichen.
 \begin{lstlisting}[style=sql, title=Databaselinks]
 -- View
 CREATE OR REPLACE VIEW filme AS
@@ -360,6 +361,45 @@ FROM filme@ananke.hades.fhnw.ch;
 CREATE SYNONYM film FOR filme@ananke.hades.fhnw.ch;
 \end{lstlisting}
 \section{Kapitel 2 - Distributed Design I}
+Ausgangslage: Anwendungen auf verschiedenen Knoten des Netzwerks greifen auf eine (relationale) Datenbank zu. Nun greifen nicht alle Knoten gleich häufig auf den selben Datensatz zu. Es gilt nun herauszufinden, welche Anwendungen (Queries) auf welchen Knoten welche Daten mit welcher Häufigkeit benötigen. Das Resultat ist eine Menge von Fragmenten, die den verschiedenen Knoten zugeteilt werden.
+\subsection{Arten der Fragmentierung}
+\begin{itemize}
+\item Horizontale Fragmentierung (HF) (Abbildung \ref{fig:horizontalFrag})
+\begin{itemize}
+\item Primäre horizontale Fragmentierung (PHF)
+\item Abgeleitete horizontale Fragmentierung (DHF)
+\end{itemize}
+\item Vertikale Fragmentierung (VF) (Abbildung \ref{fig:verticalFrag})
+\item Gemischte Fragmentierung (MF)
+\end{itemize}
+\begin{figure}[ht]
+  \includegraphics[scale=0.75]{src/horizontale_fragmentierung.png}
+	\caption{Horizontale Fragmentierung}
+	\label{fig:horizontalFrag}
+\end{figure}
+\begin{figure}[ht]
+  \includegraphics[scale=0.75]{src/vertikale_fragmentierung.png}
+	\caption{Horizontale Fragmentierung}
+	\label{fig:verticalFrag}
+\end{figure}
+\subsubsection{PHF}
+\textbf{Predicates}\\
+\begin{tabular}{| m{5cm} | m{5cm} | m{6cm} |}
+\hline 
+Simple predicates & Vergleich eines Attributs mit einem Wert (WHERE-Klausel) & \begin{center}\includegraphics[scale=0.5]{src/simple_predicates.png}\end{center}\\ \hline
+Minterm predicates & Verknüpfung von Simple predicates mit AND und NOT & \begin{center}\includegraphics[scale=0.5]{src/minterm_predicates.png}\end{center}\\ \hline
+\end{tabular}
+\subsection{Korrektheit der Fragmentierung}
+\begin{tabular}{| p{5cm} | p{10cm} |}
+\hline
+vollständig &
+Wenn R zerlegt wird in R1, R2, ..., Rn, dann muss jedes Datenelement aus R in einem Ri enthalten sein.\\ \hline
+rekonstruierbar &
+Wenn R zerlegt wird in R1, R2, ..., Rn, dann muss es relationale Operatoren geben, so dass R wiederhergestellt werden kann.\\ \hline
+disjunkt &
+Wenn R horizontal zerlegt wird in R1, R2, ..., Rn, dann müssen die Fragemente paarweise disjunkt sein.\newline
+Wenn R vertikal zerlegt wird in R1, R2, ..., Rn, dann müssen die Fragmente bezogen auf die nichtprimen Attribute paarweise disjunkt sein.\\ \hline
+\end{tabular}
 \section{Kapitel 3 - Distributed Design II}
 \section{Kapitel 4 - Distributed Query Processing}
 \section{Kapitel 5 - Distributed Transactions I}
