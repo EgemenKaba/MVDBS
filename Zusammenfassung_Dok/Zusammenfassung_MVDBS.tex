@@ -8,6 +8,8 @@
 \usepackage{fancyhdr}
 \usepackage{soul}
 \usepackage{array}
+\usepackage{amssymb}
+\usepackage{wrapfig}
 
 \usepackage{lmodern} % Latin Modern
 
@@ -379,16 +381,125 @@ Ausgangslage: Anwendungen auf verschiedenen Knoten des Netzwerks greifen auf ein
 \end{figure}
 \begin{figure}[ht]
   \includegraphics[scale=0.75]{src/vertikale_fragmentierung.png}
-	\caption{Horizontale Fragmentierung}
+	\caption{Vertikale Fragmentierung}
 	\label{fig:verticalFrag}
 \end{figure}
-\subsubsection{PHF}
-\textbf{Predicates}\\
-\begin{tabular}{| m{5cm} | m{5cm} | m{6cm} |}
+\subsection{PHF}
+\subsubsection{Predicates}
+\begin{tabular}{| p{5cm} | p{5cm} | p{6cm} |}
 \hline 
 Simple predicates & Vergleich eines Attributs mit einem Wert (WHERE-Klausel) & \begin{center}\includegraphics[scale=0.5]{src/simple_predicates.png}\end{center}\\ \hline
 Minterm predicates & Verknüpfung von Simple predicates mit AND und NOT & \begin{center}\includegraphics[scale=0.5]{src/minterm_predicates.png}\end{center}\\ \hline
+Vollständigkeit & \multicolumn{2}{p{10cm}|}{Eine Menge von simple predicates ist vollständig genau dann, wenn au fbeliebige 2 Tupel im gleichen Fragment von allen Anwendungen mit der gleichen Häufigkeit zugegriffen wird}\\ \hline
+Minimalität & \multicolumn{2}{p{10cm}|}{Wird durch ein simple predicate ein Fragment weiter aufgeteilt, dann muss es mindestens eine Anwendung geben, die auf diese Fragmente verschieden zugreift. Ein simple predicate soll also relevant sein für die Bestimmung einer Fragmentierung. Sind alle simple predicate einer Menge P relevant, dann ist P minimal}\\ \hline
 \end{tabular}
+\subsubsection{PHF Beispiel}
+\begin{tabular}{| p{3cm} | p{5cm} | p{4cm} | p{4cm}|}
+\hline
+Anwendung & Query & Parameter & Simple Predicates \\ \hline
+Anwendung 1 & SELECT bname, bestand \newline FROM bikes \newline WHERE typ = ? & 
+City (4/Woche) \newline
+Trekking (3/Woche) \newline
+Mountain (2/Woche) \newline
+Road (1/Woche) & 
+p1: Typ = 'Road' \newline
+p2: Typ = 'Mountain' \newline
+p3: Typ = 'Trekking' \newline
+p4: Typ = 'City'
+\\ \hline
+Anwendung 2 & SELECT * \newline FROM bikes \newline WHERE preis = ? &
+$<$2000 (3/Woche) \newline
+$>=$2000 (1/Woche) \newline &
+p5: Preis $<$ 2000 \newline
+p6: Preis $>=$ 2000
+\\ \hline
+\end{tabular}
+Sinnvolle minterm predicates bilden. Zum Beispiel: m1: Typ = 'Road' AND Preis $<$ 2000.\\
+\subsection{DHF}
+Horizontale Fragmentierung auf einer übergeordneten horizontal fragmentierten Relation. Dadurch soll sichergestellt werden, dass auf häufig im Verbund zugegriffene Relationen auf dem selben Knoten liegen.\\
+Falls die Tabelle KUNDEN nun in KUNDEN1 - KUNDEN4 fragmentiert werden, sieht die Fragmentierung der Tabele AUFTRAEGE wie folgt aus: AUFTRAEGEi = (AUFTRAEGE) $\ltimes$ (KUNDENi)
+\section{Kapitel 3 - Distributed Design II}
+\subsection{VF}
+\subsubsection{Anwendungen als Queries}
+\begin{tabular}{p{5cm}  p{5cm}}
+q1 & q1\\ \hline
+SELECT bestand\newline FROM bikes WHERE bname = ? & SELECT bestand, preis\newline FROM bikes\\ \\
+q3 & q4\\ \hline
+SELECT preis\newline FROM bikes WHERE typ = ? & SELECT AVG(bestand)\newline FROM bikes WHERE typ = ?
+\end{tabular}
+\subsubsection{[U]sage Matrix}
+\begin{tabular}{|l||c|c|c|c|}
+\hline
+&BName&Preis&Typ&Bestand\\ \hline
+q1 & 1 & 0 & 0 & 1 \\ \hline
+q2 & 0 & 1 & 0 & 1 \\ \hline
+q3 & 0 & 1 & 1 & 0 \\ \hline
+q4 & 0 & 0 & 1 & 1 \\ \hline
+\end{tabular}\\
+1 = Query verwendet Attribut\\
+0 = Query verwendet Attribut nicht
+\subsubsection{[Acc]ess frequency Matrix}
+\begin{tabular}{|c||c|c|c|}
+&S1&S2&S3\\ \hline
+q1 & 15 & 20 & 10\\ \hline
+q2 & 5 & 0 & 0\\ \hline
+q3 & 25 & 25 & 25\\ \hline
+q4 & 3 & 0 & 0\\ \hline
+\end{tabular}\\
+Frage: Wie viel mal wird ein Query auf einem Knoten ausgeführt?\\
+Da jetzt jedes Attribut ein Fragment bilden würde, muss jetzt nach einer Attributsmenge gesucht werden, auf die ähnlich zugegriffen wird.
+\subsubsection{Affinitätsmatrix AA}
+\begin{tabular}{|l||c|c|c|c|}
+\hline
+&BName&Preis&Typ&Bestand\\ \hline
+BName & 45 & 0 & 0 & 45 \\ \hline
+Preis & 0 & 80 & 75 & 5 \\ \hline
+Typ & 0 & 75 & 78 & 3 \\ \hline
+Bestand & 45 & 5 & 3 & 53 \\ \hline
+\end{tabular}\\
+Vorgehen: In der Access frequency Matrix Summer über jedes Query bilden (z.B. q1 = 45). Funktion aff(Ai,Aj) bestimmen durch Folgendes:
+\begin{itemize}
+\item Zeilen/Queries in der Usage Matrix suchen, die in diesen beiden Spalten eine 1 stehen haben.
+\item Summen dieser Queries aus der Access frequency Matrix zusammenzählen.
+\item In die Affinitätsmatrix in der Zeile/Spalte Ai und der Spalte/Zeile Aj eintragen.
+\end{itemize}
+\subsubsection{Bond Energy Algorithmus (BEA)}
+Dieser Algorithmus maximiert die globale Affinität einer Affinitätsmatrix.\\
+Die globale Affinität einer Matrix zu berechnen, muss die Funktion bond(Ax,Ay) für alle benachbarten Attribute ausgeführt werden.\\
+Vorgehen Funktion bond(Ax,Ay):
+\begin{itemize}
+\item Über sämtliche Zeilen iterieren
+\item Für jede Zeile den Eintrag in der Spalte Ax mit dem Eintrag in der Spalte Ay multiplizieren
+\item Summe über diese Werte bilden
+\end{itemize}
+\includegraphics[scale=0.8]{src/bea.png}
+\subsubsection{Splitting der Resultatsmatrix BEA}
+\begin{tabular}{|l||c|c|c|c|}
+\hline
+&Bname&Bestand&Preis&Typ\\ \hline
+BName & 45 & 45 & 0 & 0 \\ \hline
+Bestand & 45 & 53 & 5 & 3 \\ \hline
+Preis & 0 & 5 & 80 & 75 \\ \hline
+Typ & 0 & 3 & 75 & 78 \\ \hline
+\end{tabular}
+Splitting mit Trennpunkt entlang der Diagonale führt zu drei Varianten:\\
+\begin{itemize}
+\item VF1: BName; VF2: Bestand,Preis,Typ
+\item VF1: BName,Bestand; VF2: Preis,Type
+\item VF1: BName,Bestand,Preis VF2: Typ
+\end{itemize}
+Die Variante mit der höchsten Trennqualität muss nun bestimmt werden.\\
+Formel Trennqualität: sq = acc(VF1) * acc(VF2) - acc(VF1,VF2)$^{2}$\\
+Vorgehen, um die Trennqualität für eine Variante zu bestimmen:\\
+In der [Acc]ess frequency Matrix Summe über jedes Query bilden (z.B. q1 = 45).\\
+Vorgehen Funktion acc:
+\begin{itemize}
+\item Zeilen/Queries in der Usage Matrix suchen, die \textbf{nur} in Spalten der Fragmentierung eine 1 und in den restlichen eine 0 stehen haben.
+\item Summen dieser Queries aus der Access frequency Matrix zusammenzählen.
+\end{itemize}
+Zum Schluss Fragmente in relationaler Algebra zum Beispiel wie folgt definieren:\\
+BIKES1: $\pi_{BNr,BName,Bestand}$(BIKES)\\
+BIKES2: $\pi_{BNr,Preis,Typ}$(BIKES)
 \subsection{Korrektheit der Fragmentierung}
 \begin{tabular}{| p{5cm} | p{10cm} |}
 \hline
@@ -400,8 +511,65 @@ disjunkt &
 Wenn R horizontal zerlegt wird in R1, R2, ..., Rn, dann müssen die Fragemente paarweise disjunkt sein.\newline
 Wenn R vertikal zerlegt wird in R1, R2, ..., Rn, dann müssen die Fragmente bezogen auf die nichtprimen Attribute paarweise disjunkt sein.\\ \hline
 \end{tabular}
-\section{Kapitel 3 - Distributed Design II}
 \section{Kapitel 4 - Distributed Query Processing}
+\subsection{Begriffe}
+\subsubsection{Komplexität der Operationen}
+\begin{tabular}{|c|c|}
+\hline
+$\sigma,\pi$(mit Duplikate) & O(n)\\ \hline
+$\pi$(ohne Duplikate), GROUP & O(n log n)\\ \hline
+$\bowtie,\div,\cup,\cap$ & O(n log n)\\ \hline
+$\times$ & On$^{2}$\\ \hline
+\end{tabular}
+\subsubsection{Kosten Modell}
+\textbf{Gesamtzeit} für Verbesserung des Durchsatzes.\\
+C$_{CPU}$*Anzahl Instruktionen + C$_{I/O}$*Anzahl Disk I/O + C$_{MSG}$*Anzahl Meldungen + C$_{TR}$*übertragene Bytes\\
+\textbf{Antwortzeit}, um die Antwortzeit der Anfrage zu reduzieren\\
+max(TC1,TC2,...,TCn); ein TCi: Gesamtkosten eines Thread der parallel ausgeführten Anfrage
+\subsection{Methodik}
+\includegraphics[scale=0.7]{src/verteilte_anfrageverarbeitung.png}
+\subsection{Reduktionen}
+\subsubsection{Beispielrelationen}
+% first column
+\begin{minipage}[t]{0.45\textwidth}
+AUF(ANr, Datum, KNr) ist fragmentiert:\\
+AUF1 = $\sigma_{ANr \leq A3}$(AUF)\\
+AUF2 = $\sigma_{A3<ANr \leq A6}$(AUF)\\
+AUF3 = $\sigma_{ANr>A6}$(AUF)\\
+AUF = AUF1 $\cup$ AUF2 $\cup$ AUF3\\
+\\
+APOSTEN(ANr, BNr, Menge) ist fragmentiert:\\
+APO1 = $\sigma_{ANr \leq A3}$(APO)\\
+APO2 = $\sigma_{ANr>A3}$(APO)\\
+APO = APO1 $\cup$ APO2\\
+\\
+KUNDEN(KNr, KName, Ort) ist fragmentiert:\\
+KUN1 = $\pi_{KNr,KName}$(KUN)\\
+KUN2 = $\pi_{KNr,Ort}$(KUN)\\
+KUN = KUN1 $\bowtie$ KUN2\\
+\end{minipage}
+\hspace{0.1\textwidth}
+%second column
+\begin{minipage}[t]{0.45\textwidth}
+Für Reduktion in DHF:\\
+KUNDEN(KNr, KName, Ort) ist fragmentiert:\\
+KUN1 = $\sigma_{Ort=Basel}$(KUN)\\
+KUN2 = $\sigma_{Ort \neq Basel}$(KUN)\\
+KUN = KUN1 $\cup$ KUN2\\
+\\
+AUFRAEGE(ANr, Datum, KNr) ist abgeleitet fragmentiert:\\
+AUF1 = AUF $\ltimes$ KUN1\\
+AUF2 = AUF $\ltimes$ KUN2\\
+AUF = AUF1 $\cup$ AUF2
+\end{minipage}
+\subsubsection{PHF mit Selektion}
+\includegraphics[scale=0.7]{src/phf_select.png}
+\subsubsection{PHF mit Join}
+\includegraphics[scale=0.7]{src/phf_join.png}
+\subsubsection{VF}
+\includegraphics[scale=0.7]{src/vf.png}
+\subsubsection{DHF}
+\includegraphics[scale=0.65]{src/dhf_red.png}
 \section{Kapitel 5 - Distributed Transactions I}
 \section{Kapitel 6 - Distributed Transactions II}
 \section{Kapitel 7 - Replication I}
