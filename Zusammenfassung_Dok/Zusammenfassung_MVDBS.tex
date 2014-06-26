@@ -527,7 +527,31 @@ C$_{CPU}$*Anzahl Instruktionen + C$_{I/O}$*Anzahl Disk I/O + C$_{MSG}$*Anzahl Me
 \textbf{Antwortzeit}, um die Antwortzeit der Anfrage zu reduzieren\\
 max(TC1,TC2,...,TCn); ein TCi: Gesamtkosten eines Thread der parallel ausgeführten Anfrage
 \subsection{Methodik}
-\includegraphics[scale=0.7]{src/verteilte_anfrageverarbeitung.png}
+\includegraphics[scale=0.7]{src/verteilte_anfrageverarbeitung.png}\\
+Zwei Schritte, um ein Query in einem verteilten System zu verarbeiten:
+\begin{itemize}
+\item Zerlegung
+\begin{itemize}
+\item Normalisierung (Bedingung in WHERE Klausel)
+\item Analyse, um inkorrekte Queries zurückzuweisen
+\item Vereinfachung, Redundanz beseitigen
+\item Umformen in optimalen Ausdruck der relationalen Algebra
+\end{itemize}
+\item Lokalisierung
+\begin{itemize}
+\item verwenden des Fragmentierungsschema
+\item vertilte Anfrage mit globalen Relationen abbilden in Anfragen mit Fragmenten
+\begin{itemize}
+\item Ersetzen der globalen Relation mit Fragmenten
+\item $\cup$ für horizontale Fragmentierung
+\item $\bowtie$ für vertikale Fragmentierung
+\end{itemize}
+\item optimieren der lokalisierten Anfrage durch Reduktion
+\begin{itemize}
+\item Reduktion mit Selektion / Join
+\end{itemize}
+\end{itemize}
+\end{itemize}
 \subsection{Reduktionen}
 \subsubsection{Beispielrelationen}
 % first column
@@ -570,6 +594,10 @@ AUF = AUF1 $\cup$ AUF2
 \includegraphics[scale=0.7]{src/vf.png}
 \subsubsection{DHF}
 \includegraphics[scale=0.65]{src/dhf_red.png}
+\subsection{SemiJoin}
+\includegraphics[width=15cm]{src/semijoin.png}\\
+\includegraphics[width=15cm]{src/semijoin2.png}\\
+\includegraphics[width=15cm]{src/semijoin3.png}
 \section{Kapitel 5 - Distributed Transactions I}
 \section{Kapitel 6 - Distributed Transactions II}
 \section{Kapitel 7 - Replication I}
